@@ -27,7 +27,7 @@ caculate_all_in_one_function是caculate的串行版本。
 copy and patch jit是jit生成的代码。
 
 其中jit的用例速度是普通的代码的1.8倍左右。
-速度快的原因有多个。在使用jit的时候,可以跳过一些变量判断，同时不用查虚函数跳到函数地址。
+速度快的原因有多个。在使用jit的时候,可以跳过一些变量判断，同时不用查虚函数表，可以直接跳到函数地址。
 另外从caculate_all_in_one_function可以看出这种循环处理也比串行处理慢,jit生成的代码同样也有这个优势。
 
 ## 生成的机器码内存情况
